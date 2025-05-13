@@ -1,0 +1,398 @@
+/* Reset all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styles */
+body {
+    scroll-behavior: smooth;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main content container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Navbar inner container */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Site logo */
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation links list */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+/* Individual nav item */
+.nav-links li {
+    margin-left: 30px;
+}
+
+/* Nav link styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Nav link hover effect */
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* Mobile menu button */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Hero banner section */
+.hero {
+    position: relative;
+    height: 60vh;
+    background: #f5f5f5;
+}
+
+/* Hero container */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Hero background image */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: brightness(0.9);
+}
+
+/* Hero content overlay */
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(60, 60, 60, 0.3);
+}
+
+/* Hero main heading */
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: white;
+    text-align: center;
+    padding: 25px 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    max-width: 90%;
+}
+
+/* Stats section */
+.stats {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+/* Stats grid container */
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+/* Individual stat box */
+.stat-item {
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: transform 0.3s;
+}
+
+/* Stat box hover effect */
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Stat heading */
+.stat-item h2 {
+    font-size: 1.8rem;
+    color: #222;
+}
+
+/* Services section */
+.services {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Services heading */
+.services h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Services grid layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 122200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Service card */
+.service-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Service image container */
+.service-image {
+    height: 70%;
+    overflow: hidden;
+}
+
+/* Service image */
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Service text container */
+.service-text {
+    height: 30%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Service title */
+.service-text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Service card hover effect */
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Service image hover effect */
+.service-item:hover .service-image img {
+    transform: scale(1.1);
+}
+
+/* Tablet responsive layout */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile responsive layout */
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About page section */
+.about-page {
+    padding: 60px 0;
+}
+
+/* About page heading */
+.about-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Team and values sections */
+.team-section, .values-section {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact page section */
+.contact-page {
+    padding: 60px 0;
+}
+
+/* Contact page heading */
+.contact-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Contact form container */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Contact form styling */
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group spacing */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Form labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Form inputs */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Textarea specific */
+.form-group textarea {
+    height: 150px;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Submit button hover */
+.submit-btn:hover {
+    background-color: #444;
+}
+
+/* Contact info box */
+.contact-info {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact info headings */
+.contact-info h3 {
+    margin: 20px 0 10px;
+    color: #222;
+}
+
+/* Footer section */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
